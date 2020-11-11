@@ -1,0 +1,27 @@
+package vektoren;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class Balkendiagramm {
+
+	public static void main(String[] args) throws IOException {
+		System.out.print("Wie viele Kandidaten sind noch im Rennen: ");
+		int werte [] = IO.readIntegerArray1D();
+		System.out.println("Ergebnis");
+		
+		
+		for (int k = 1; k < 1+1; k++) {
+			System.out.print("Kandidat "+k+": ");  
+			for (int i = 0; i < werte.length; i++) {
+				for (int j = 0; j < werte[i]; j++) {
+					System.out.print(" *");
+				}
+				System.out.print("  "+werte[i]+"%   ");
+				System.out.println("");
+			}
+		}
+	}
+
+}

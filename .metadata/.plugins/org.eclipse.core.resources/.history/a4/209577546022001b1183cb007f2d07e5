@@ -1,0 +1,20 @@
+package vektoren;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class Maxima {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("Bitte geben Sie ein Array aus Kommazahlen ein: ");
+		double werte [] = IO.readDoubleArray1D();
+		for (int i = 1; i < werte.length; i++) {
+			if (werte [0] < werte[i]) {
+				werte [0] = werte[i];
+			}
+		}
+		System.out.println(werte[0]);
+	}
+
+}

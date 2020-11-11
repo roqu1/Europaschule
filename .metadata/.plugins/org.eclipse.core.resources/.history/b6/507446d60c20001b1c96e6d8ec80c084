@@ -1,0 +1,116 @@
+package oop;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class IO {
+	public static String readString() throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String eingabe = br.readLine();
+		return eingabe;
+
+
+	}
+	public static int readInteger() throws IOException {
+		while (true) {
+			try	{
+				String eingabe = readString();
+				int zahl = Integer.parseInt(eingabe);
+				return zahl;
+			}
+			catch (NumberFormatException e) {
+				System.out.print("Das ist keine Ganzzahl!! Wiederholen sie erneut");
+			}
+
+		}
+	}
+	public static double readDouble() throws IOException {
+		while (true) {
+			try	{
+				String eingabe = readString();
+				double zahl = Double.parseDouble(eingabe.trim().replace("," , "."));
+				return zahl;
+			}
+			catch (NumberFormatException e) {
+				System.out.print("Das ist keine Zahl!! Wiederholen sie erneut");
+			}
+
+		}
+	}
+	public static boolean readBoolean() throws IOException {
+
+		while (true) {
+
+			String eingabe = readString();
+			if ((eingabe.equalsIgnoreCase("Ja"))|| (eingabe.equalsIgnoreCase("Yes"))
+					||(eingabe.equalsIgnoreCase("j"))||(eingabe.equalsIgnoreCase("y"))) {
+				return true ;
+			}
+			else if( eingabe.equalsIgnoreCase("n")||eingabe.equalsIgnoreCase("nein") ) {
+				return false ;
+			}
+			System.out.println("Falsche Eingabe. Bitte wiederholen");
+		}
+
+	}
+
+	public static int readArraysInt() throws IOException {
+		while (true) {
+			try	{ 
+				System.out.println("Wie viele Arrays?");
+				int eingabe = IO.readInteger();
+				int [] arrays = new int[eingabe];
+				for (int i=0;i<arrays.length;i++) {
+					arrays[i] = IO.readInteger();
+				}
+				for (int i=0;i<arrays.length;i++) {
+					System.out.println(arrays[i]);
+				}
+			}
+
+			catch (NumberFormatException e) {
+				System.out.print("Das ist keine Ganzzahl!! Wiederholen sie erneut");
+			}
+
+		}
+	}
+	public static int readArraysDouble() throws IOException {
+		while (true) {
+			try	{ 
+				System.out.println("Wie viele Arrays?");
+				double eingabe = IO.readDouble();
+				double [] arrays = new double[(int) eingabe];
+				for (int i=0;i<arrays.length;i++) {
+					arrays[i] = IO.readDouble();
+				}
+				for (int i=0;i<arrays.length;i++) {
+					System.out.println(arrays[i]);
+				}
+			}
+
+			catch (NumberFormatException e) {
+				System.out.print("Das ist keine Zahl!! Wiederholen sie erneut");
+			}
+		}
+	}
+	public static String readArraysString() throws IOException{
+		System.out.println("Wie viele Arrays?");
+		int eingabe = IO.readInteger();
+		String [] arrays = new String[eingabe];
+
+		System.out.println("Schreiben sie die Werte für Arrays ein: ");
+
+		for (int i=0;i<arrays.length;i++) {
+			arrays[i] = IO.readString();
+		}
+
+		System.out.println("Ihre Arrays Werte sind ");
+
+		for (int i=0;i<arrays.length;i++) {
+			System.out.print(arrays[i]+" ");
+		}
+		return arrays[56];
+		
+	}
+}

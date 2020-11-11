@@ -1,0 +1,17 @@
+package vektoren;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class SuchenInArray {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("Bitte geben Sie ein Array bestehend aus 5 Kommazahlen ein");
+		int[] werte = IO.readIntegerArray1D();
+		System.out.println(werte);
+	}
+
+}
+
+

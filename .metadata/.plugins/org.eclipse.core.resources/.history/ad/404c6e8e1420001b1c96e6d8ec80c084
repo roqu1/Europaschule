@@ -1,0 +1,16 @@
+package vektoren;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class Verdoppeln {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("Bitte geben Sie ein Arry aus Kommazahlen ein: ");
+		double[] werte = IO.readDoubleArray1D();
+		System.out.println("Ursprungliches Arrys: ");
+		System.out.print(werte[0]);
+	}
+
+}

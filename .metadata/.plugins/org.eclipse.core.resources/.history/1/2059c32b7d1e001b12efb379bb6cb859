@@ -1,0 +1,27 @@
+package array;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class arrays {
+
+	public static void main(String[] args) throws IOException {
+		System.out.println("Wie viele Arrays?");
+		int eingabe = IO.readInteger();
+		int [] arrays = new int[eingabe];
+
+		System.out.println("Schreiben sie die Werte für Arrays ein: ");
+
+		for (int i=0;i<arrays.length;i++) {
+			arrays[i] = IO.readInteger();
+		}
+
+		System.out.println("Ihre Arrays Werte sind ");
+
+		for (int i=0;i<arrays.length;i++) {
+			System.out.println(arrays[i]);
+		}
+	}
+}
+

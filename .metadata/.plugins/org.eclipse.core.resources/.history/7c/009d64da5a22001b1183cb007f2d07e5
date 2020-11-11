@@ -1,0 +1,25 @@
+package vektoren;
+
+import java.io.IOException;
+
+import oop.IO;
+
+public class Summen {
+
+	public static void main(String[] args) throws IOException {
+		double werte [] = IO.readDoubleArray1D();
+		double gerade = 0;
+		double ungerade = 0;
+		for(int i=0;i<werte.length;i++) {
+			if(werte [i]%2 == 0) {
+				gerade = werte[i]+gerade;
+			}
+			else {
+				ungerade = werte[i]+ungerade;
+			}
+		}
+		System.out.println(gerade+"\t"+ ungerade);
+
+	}
+
+}
