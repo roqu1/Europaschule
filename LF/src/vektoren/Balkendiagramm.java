@@ -12,18 +12,18 @@ public class Balkendiagramm {
 		System.out.println("Ergebnis");
 
 
-		for (int k = 1; k < werte.length+1; k++) {
-			System.out.print("Kandidat "+k+": ");  
+		for (int k = 0; k < werte.length; k++) {
+			System.out.print("Kandidat "+(k+1)+": ");  
 
-			for (int i = 0; i < werte.length; i++) {
-				for (int j = 0; j < werte[i]; j++) {
+				for (int j = 0; j < werte[k]; j++) {
 					System.out.print(" *");
 				}
-				System.out.print("  "+werte[i]+"%   ");
-			}
+				System.out.print("  "+werte[k]+"%   ");
 			System.out.println("");
+		}
+			
 		}
 
 	}
 
-}
+
