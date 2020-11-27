@@ -34,8 +34,6 @@ public class TestIO {
 			System.out.println("");
 		}
 	} */
-		System.out.println("Was geht?");
-		int info [][] = IO.readIntegerArray2D();
 		
 		
 
