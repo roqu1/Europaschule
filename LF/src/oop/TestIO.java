@@ -5,26 +5,40 @@ import java.io.IOException;
 public class TestIO {
 
 	public static void main(String[] args) throws IOException {
-//		System.out.println("Wie ist deine Name?");
-//		String name = IO.readString() ;
-//		System.out.println("Moin " + name);
-//		System.out.println("Und wie Alt bist du?");
-//		int jahr = IO.readInteger();
-//		System.out.println(jahr + " Jahre Alt");
-//		System.out.println("Gewicht?");
-//		double gewicht = IO.readDouble();
-//		System.out.println(gewicht + " kg");
-//		System.out.println("Soll das Programm wiederholt werden?");
-//		System.out.println("Gefällt es Dir in unserer Schule");
-//		boolean ok = IO.readBoolean();
-//		if (ok == true) {
-//			System.out.println("Das freut mich");
-//		} else if (ok == false) {
-//			System.out.println("Dascha blöööd");
-//		}
+		/*	boolean mehr = true;
+
+		System.out.print("Wie viele Zeilen?:");
+		int zeile = IO.readInteger();
+		System.out.print("Wie viele Spalte?:");
+		int spalte = IO.readInteger();
+		int [][] d = new int [zeile][spalte];
+		// Tabelle wurde gemacht
+
+		// Der eingeber initialisiert selber
+		while (mehr==true) {
+		System.out.print("Welche Zeile ?:");
+		int a = IO.readInteger();
+		System.out.print("Welche Spalte?:");
+		int b = IO.readInteger();
+		System.out.print("Geben sie ein Wert ein?:");
+
+		d[a][b] = IO.readInteger();
+		System.out.print("Wollen sie noch ein Wert eingeben?(j/n):");
+		mehr = IO.readBoolean();
+		}
+		System.out.print("Vom welche Zeile wollen Sie sich das anschauen?");
+		for (int i = IO.readInteger(); i < d.length; i++) {
+			for (int j = 0; j < d[i].length; j++) {
+				System.out.print(d[i][j]+"\t");
+			}
+			System.out.println("");
+		}
+	} */
+		System.out.println("Was geht?");
+		int info [][] = IO.readIntegerArray2D();
 		
-		double[] text = IO.readDoubleArray1D();
-		System.out.println(text);
+		
+
 	}
 }
 
